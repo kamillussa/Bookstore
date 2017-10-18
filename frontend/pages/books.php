@@ -29,11 +29,11 @@
             <legend class="voffset2">Edit book</legend>
             <div class="form-group">
                 <label for="title">Title</label>
-                <input type="text" class="form-control" name="title" id="title" placeholder="Title...">
+                <input type="text" class="form-control" name="title" id="titleEdit" placeholder="Title...">
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea class="form-control" name="description" id="description" cols="30" rows="5"
+                <textarea class="form-control" name="description" id="descriptionEdit" cols="30" rows="5"
                           placeholder="Description..."></textarea>
             </div>
             <button type="submit" class="btn btn-primary"><i class="fa fa-book"></i>&nbsp;Edit</button>
