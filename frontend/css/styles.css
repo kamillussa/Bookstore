@@ -34,7 +34,11 @@
     margin-left : 20px;
 }
 
+
 #bookEdit {
+
+}
+#bookEdit, #authorEdit {
     display : none;
 }
 

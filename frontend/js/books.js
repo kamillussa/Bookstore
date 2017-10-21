@@ -27,14 +27,14 @@ $(document).ready(function () {
                     </li>`;
         $('#booksList').append(element);
         var option = `<option value="${book.id}"> ${book.title} </option>`;
-        $('#bookEditSelect').append(option);
+        $('#authorEditSelect').append(option);
     }
     //Submit
     $('#bookAdd').on('submit', function (e) {
         e.preventDefault();
         var title = $('#title').val();
         var description = $('#description').val();
-        if (title.length == 0 && description.length == 0) {
+        if (title.length === 0 && description.length === 0) {
             return;
         }
         $.ajax({
@@ -49,7 +49,7 @@ $(document).ready(function () {
             addBook(result.success[0]);
         }).fail(function (xhr, cod) {
             console.log(xhr, cod);
-        })
+        });
     });
     //Get books from db
     $.ajax({

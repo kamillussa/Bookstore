@@ -33,8 +33,7 @@
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea class="form-control" name="description" id="descriptionEdit" cols="30" rows="5"
-                          placeholder="Description..."></textarea>
+                <textarea class="form-control" name="description" id="descriptionEdit" cols="30" rows="5"></textarea>
             </div>
             <button type="submit" class="btn btn-primary"><i class="fa fa-book"></i>&nbsp;Edit</button>
         </form>
