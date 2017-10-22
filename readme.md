@@ -1,9 +1,7 @@
 
 <img alt="Logo" src="http://coderslab.pl/svg/logo-coderslab.svg" width="400">
 
-# PHP - Warsztat 3
+# This aplication is using REST API
 
-<img alt="Logo" src="http://coderslab.pl/wp-content/themes/coderslab/svg/logo-coderslab.svg" width="400">
 
-# PHP - Warsztat 3
 
