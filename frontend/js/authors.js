@@ -31,7 +31,9 @@ $(document).ready(function () {
                             <div class="panel panel-default">
                                 <div class="panel-heading"><span class="authorTitle">${author.name} ${author.surname}</span>
                                     <button data-id="${author.id}" class="btn btn-danger pull-right btn-xs btn-author-remove"><i class="fa fa-trash"></i></button>
+                                    <button data-id="${author.id}" class="btn btn-primary pull-right btn-xs btn-author-books"><i class="fa fa-book"></i></button>
                                 </div>
+                                <ul class="authorBooksList"></ul>
                             </div>
                         </li>`;
         $('#authorsList').append(element);
@@ -92,6 +94,25 @@ $(document).ready(function () {
                 console.log(xhr, cod);
             });
         });
+    });
+    
+    //Show book list
+    $(document).on('click', '.btn-author-books', function() {
+       var authorId = $(this).data('id');
+       var bookList = $(this).parent().next();
+       $.ajax({
+           url: `${API_HOST}/author/${authorId}`,
+           method: 'GET',
+           dataType: 'JSON'
+       }).done(function (result) {
+           console.log(result.success[0]);
+           result.success[0].books.forEach(function (e) {
+               bookList.append(`<li>${e.title}</li>`);
+           });
+           bookList.show();
+       }).fail(function (xhr, cod) {
+          console.log(xhr, cod); 
+       });
     });
     
 });
